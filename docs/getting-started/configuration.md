@@ -7,6 +7,7 @@ The following settings are available.
 To change settings edit the file `local_settings.py` in the project root directory.
 If the file does not yet exist, you may need to create it.
 
+
 ## Core
 Configure basic settings like allowed host header values and CSRF and CORS origins.
 ```python
@@ -15,8 +16,22 @@ CSRF_TRUSTED_ORIGINS = ["https://pecoret.lan", "https://pecoret.lan:8443"]
 ALLOWED_HOSTS = ["pecoret.lan", "pecoret.lan:8443"]
 
 SECRET_KEY = "somelongsecret key"
+
 # Do not turn on DEBUG in production!
 DEBUG = False
+```
+
+The site specific settings are mainly used to create mails:
+```python
+SITE_NAME = "My cool PeCoReT instance"
+DOMAIN = "pecoret.example.com"
+PROTOCOL = "https"
+```
+
+Django comes with a built-in admin panel. It is disabled by default in *PeCoReT*. If you need it, you can enable it with the following setting:
+
+```python
+ENABLE_DJANGO_ADMIN_PANEL = True
 ```
 
 ## Database
@@ -35,7 +50,6 @@ DATABASES = {
 }
 ```
 
-
 ## Additional Packages
 Configure additional packages.
 ```python
@@ -49,4 +63,17 @@ ADDITIONAL_PACKAGES = [
 
 ```python
 ADVISORY_TEMPLATE = "my_customizations"
+```
+
+## Reporting
+To populate the report templates with your company information, you can use the following settings.
+```python
+REPORT_COMPANY_INFORMATION = {  
+    "name": "PeCoReT",  
+    "street": "Test Street 1",  
+    "zip": "1337",  
+    "city": "London",  
+    "homepage": "https://pecoret.github.io",  
+    "email": "pecoret@example.com",  
+}
 ```

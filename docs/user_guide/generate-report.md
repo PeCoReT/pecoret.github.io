@@ -1,6 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_position: 10
 ---
 
 # Generate Reports
-To Be Done
+
+Reports can be generated using the:
+- [REST-API](docs/user_guide/rest-api.md)
+- [Web Interface Extension](/docs/extensions/web-interface)
