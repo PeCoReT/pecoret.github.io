@@ -152,11 +152,4 @@ server {
 ```
 
 ## Import Default Templates (optionally)
-If you want to use our (currently quite small) default templates, run the following command:
-
-```bash
-su - pecoret
-cd /opt/PeCoReT
-python manage.py import_vulnerability_templates PeCoReT_default_templates
-exit
-```
+See [/docs/advanced_guide/comman-tasks#import-vulnerability-templates] for further information.
