@@ -8,7 +8,8 @@ Assets are part of projects and describe the components that are part of the sco
 
 Currently the following asset types are available:
 
-- Web-Applications
+- Web Applications
 - Hosts
 - Services
+- Mobile Applications
 
