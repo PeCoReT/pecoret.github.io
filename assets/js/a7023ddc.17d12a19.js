@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpecoret_docs=self.webpackChunkpecoret_docs||[]).push([[1713],{3457:e=>{e.exports=JSON.parse('[{"label":"post","permalink":"/blog/tags/post","count":1}]')}}]);
