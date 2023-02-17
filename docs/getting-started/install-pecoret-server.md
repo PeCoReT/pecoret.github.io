@@ -152,4 +152,4 @@ server {
 ```
 
 ## Import Default Templates (optionally)
-See [common tasks](/docs/advanced_guide/comman-tasks#import-vulnerability-templates) for further information.
+See [common tasks](/docs/advanced_guide/common-tasks#import-vulnerability-templates) for further information.
