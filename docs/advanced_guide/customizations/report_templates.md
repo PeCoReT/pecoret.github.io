@@ -24,10 +24,6 @@ my_customizations
 	|--- another_template
 		|---...
 |---templates
-|---vulnerability_templates
-|   |---broken-access-control
-|   |---...
-|   __init__.py
 ```
 
 You can deploy multiple templates using one python package and thus share code between parts of the templates.
