@@ -15,7 +15,7 @@ cd pecoret-frontend && touch .env.local
 ## Example .env file
 ```
 # URL to PeCoReT server API
-VUE_APP_API_URL=http://localhost:8000
+VITE_APP_API_URL=http://localhost:8000
 ```
 
 ## nginx
