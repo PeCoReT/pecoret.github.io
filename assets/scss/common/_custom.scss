@@ -1,0 +1,16 @@
+/** Custom styles */
+
+.header-bar {
+    border-top: 0;
+}
+
+.frontpage-cover {
+    background-image: src('/assets/images/cover.png');
+}
+
+.home {
+    .wrap {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}

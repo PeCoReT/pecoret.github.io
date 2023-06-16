@@ -13,7 +13,7 @@ weight: 100
 toc: true
 ---
 
-/
+
 {{< alert icon="" context="warning" text="PeCoReT is in an early stage of development! Do not use it in production!" />}}
 
 PeCoReT allows pentesters to focus on testing instead of writing the report.
