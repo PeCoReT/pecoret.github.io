@@ -37,15 +37,6 @@ apt install git python3-pip nginx
 ```
 
 
-### Install Dependencies
-In this step, we install some dependencies that are required to run PeCoReT.
-
-#### Debian
-```bash
-apt install git python3-pip nginx
-```
-
-
 ### Installation
 
 Clone the repository somewhere. The following guide assumes you are installing components to `/opt`.
@@ -59,7 +50,7 @@ chown pecoret:pecoret -R .
 
 Now we need to install the python dependencies:
 ```
-pip install -r requirements.txt && pip install gunicorn
+pip install -r server/requirements.txt && pip install gunicorn
 ```
 
 *Note: You may want to install python dependencies into a virtual environment.*
@@ -68,7 +59,7 @@ The configuration file (`local_settings.py`) needs to be created
 
 ```bash
 su - pecoret
-cd /opt/pecoret-server/server
+cd /opt/pecoret/server
 cp local_settings.template.py local_settings.py
 exit
 ```
@@ -81,8 +72,23 @@ This is an optional step, which depends on your setup and configuration.
 For example, if you plan to use a *sqlite* database, you do not need to do anything from this section.
 
 #### PostgreSQL
-To Be Done
 
+```bash
+su - postgres -c psql
+```
+
+in the postgres console:
+```
+CREATE DATABASE pecoret;
+CREATE USER pecoret WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE pecoret TO pecoret;
+ALTER DATABASE pecoret OWNER TO pecoret;
+```
+
+you may need to install an additional dependency:
+```
+pip install psycopg2-binary
+```
 
 ### Initializing PeCoReT
 In the next step, we need to initialize PeCoReT.
@@ -108,7 +114,7 @@ After=network.target
 [Service]
 User=pecoret
 Group=pecoret
-WorkingDirectory=/opt/pecoret/pecoret/server
+WorkingDirectory=/opt/pecoret/server
 ExecStart=gunicorn --bind 127.0.0.1:8000 pecoret.wsgi
 
 [Install]
@@ -132,7 +138,7 @@ After=network.target
 [Service]
 User=pecoret
 Group=pecoret
-WorkingDirectory=/opt/pecoret/pecoret/server
+WorkingDirectory=/opt/pecoret/server
 ExecStart=python3 manage.py qcluster
 
 [Install]
@@ -143,6 +149,27 @@ WantedBy=multi-user.target
 systemctl start pecoret-qcluster
 systemctl enable pecoret-server
 ```
+
+
+### Install Frontend
+
+follow the [nodejs documentation](https://nodejs.org/en/download/package-manager) for install instructions depending on your distribution.
+```
+cd /opt/pecoret/frontend
+```
+and create a `.env` file with the following content:
+
+```
+VITE_APP_API_URL=https://pecoret.example.com/api
+```
+
+change the URL of the api and build the frontend.
+
+```
+npm install
+npm run build
+```
+
 
 
 ### Setup Nginx
@@ -182,9 +209,6 @@ Start nginx:
 ```bash
 systemctl start nginx
 ```
-
-### Install Frontend
-TBD
 
 
 ### Import Default Templates (optionally)
