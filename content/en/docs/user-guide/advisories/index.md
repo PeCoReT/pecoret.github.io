@@ -40,9 +40,12 @@ A date with the planned date of disclosing the advisory details is calculated ba
 You can create advisories from findings of your project.
 Additional information about the affected product and its vendor are required.
 
+![](advisory-from-finding.png)
 
 ## Exporting Advisories
 You can export advisories to a markdown file, which you may want to use in combination to static side generators.
 Or you can export an advisory to a PDF report file.
+
+![Download advisories](download-advisories.png)
 
 The used template must be set in the [settings](/docs/getting-started/configuration).
