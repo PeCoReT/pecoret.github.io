@@ -14,3 +14,11 @@
         padding-right: 0px !important;
     }
 }
+
+.docs-navigation {
+    .card {
+        .card-body {
+            color: $link-color-dark
+        }
+    }
+}
