@@ -18,11 +18,10 @@ Checklists are used to track the project of the pentest for the assets.
 
 A checklist - in the background - consists of a *list*, *categories* and *items*.
 
+![checklist overview](/attachments/docs/checklist-overview.png)
 
-![checklist overview](checklist-overview.png)
-
-
-The screenshot above has a small *Web Application Checklist* enabled, which only consists of the *Password Reset Function* category.
+The screenshot above has a small *Web Application Checklist* enabled, which only consists of the *Password Reset
+Function* category.
 This category contains three *items* - "common-flaws", "password reset poisoning" and "reset-token-leak-referrer".
 Items can contain a description written in Markdown.
 However, a category does not have to contain items, but then it cannot be checked off in the frontend.

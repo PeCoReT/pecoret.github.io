@@ -66,28 +66,34 @@ DATABASES = {
 
 ## Additional Packages
 Configure additional packages.
+
 ```python
 ADDITIONAL_PACKAGES = [
-   'my_customizations',
-   'pecoret_default_templates'
+   'my_extension'
 ]
 ```
 
 ## Advisories
+
+Define the default advisory template that is used. The template name must match the name of
+the [report template](/docs/customizations/report-templates).
 
 ```python
 ADVISORY_TEMPLATE = "my_customizations"
 ```
 
 ## Reporting
+
 To populate the report templates with your company information, you can use the following settings.
+The dictionary is added to the context while rendering reports.
+
 ```python
-REPORT_COMPANY_INFORMATION = {  
-    "name": "PeCoReT",  
-    "street": "Test Street 1",  
-    "zip": "1337",  
-    "city": "London",  
-    "homepage": "https://pecoret.github.io",  
-    "email": "pecoret@example.com",  
+REPORT_COMPANY_INFORMATION = {
+  "name": "PeCoReT",
+  "street": "Test Street 1",
+  "zip": "1337",
+  "city": "London",
+  "homepage": "https://pecoret.github.io",
+  "email": "pecoret@example.com",
 }
 ```

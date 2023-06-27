@@ -17,10 +17,12 @@ This part is, personally thinking, the most difficult and time-consuming part in
 This page tries to help you to get familiar implementing custom report templates.
 Once done, *PeCoReT* can use the template for various report generation tasks.
 
-Report templates use the jinja2 rendering engine.
+Report templates use the jinja2 rendering engine. Weasyprint is used to finally generate the PDF.
+Other report types are *jinja-only*.
 
 ## Directory Structure
-Customzations in *PeCoReT* can be loaded from file paths.
+
+Customizations in *PeCoReT* can be loaded from file paths.
 An example directory structure of a report template is shown below.
 
 ```
@@ -40,7 +42,9 @@ It is compiled and included by default.
 
 
 ## Installation / Usage
-To finally use the template a super admin user needs to create the template using the [REST-API](/docs/user-guides/rest-api/) or [web interface](/docs/extensions/web-interface/).
+
+To finally use the template a super admin user needs to create the template using
+the [REST-API](/docs/user-guide/rest-api/) or web interface.
 
 
 ## Create a new Report Template
@@ -57,16 +61,16 @@ touch __init__.py
 
 Inside your `templates` directory, the following files may be present:
 
-- **vulnerability_overview.csv**:   
-Used to export a vulnerabiltiy overview for a project report.
-- **single_finding_export.html**:   
-used to export a single finding to PDF report.
+- **vulnerability_overview.csv**:
+  Used to export a vulnerability overview for a project report.
+- **single_finding_export.html**:
+  used to export a single finding to PDF report.
 - **pentest_report.html**:
-Used to generate a pentest PDF report.
+  Used to generate a pentest PDF report.
 - **advisory.md**:
-Markdown version of a advisory.
+  Markdown version of a advisory.
 - **advisory_export.html**:
-Export advisory details to PDF.
+  Export advisory details to PDF.
 
 The `report.py` file may contain the following classes.
 
@@ -112,7 +116,8 @@ LANGUAGES = [("en", gettext("English")), ("de", gettext("German"))]
 If you add a new language, you **must** run `python manage.py makemigrations`.
 
 ### Limitation
-It is not yet possible to have a project that allows multi language reports.
+
+It is not yet possible to have a project that allows multi-language reports.
 This means, that if your customer wants to have a german and an english report for the same project, this is not possible.
 You would need to create two separate project and migrate the findings to the other one using the REST-API.
 
