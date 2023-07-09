@@ -18,10 +18,6 @@ You can import CWE data into the *PeCoReT* database.
 The data is shipped with *PeCoReT* by default and is available as XML file in the `resources`
 directory.
 
-{{< alert icon="" context="info" >}}
-This task is executed automatically if the `import_vulnerability_templates` script is executed" 
-{{< /alert >}}
-
 ```bash
 python manage.py import_cwe_entries
 ```
