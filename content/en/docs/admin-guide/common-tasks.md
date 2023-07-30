@@ -42,4 +42,11 @@ To import the default templates, you may use this command:
 python manage.py import_vulnerability_templates default_templates/vulnerability_templates
 ```
 
+### Import default Cronjobs
+
+A management command is available to initialize some default cronjobs (e.g. delete expired memberships)
+
+```bash
+python manage.py init_default_cronjobs
+```
 
