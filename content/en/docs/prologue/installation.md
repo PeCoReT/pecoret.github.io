@@ -55,12 +55,12 @@ pip install -r server/requirements.txt && pip install gunicorn
 
 *Note: You may want to install python dependencies into a virtual environment.*
 
-The configuration file (`local_settings.py`) needs to be created
+The configuration file (`production.py`) needs to be created
 
 ```bash
 su - pecoret
 cd /opt/pecoret/server
-cp local_settings.template.py local_settings.py
+cp local_settings.template.py conf/production.py
 exit
 ```
 
