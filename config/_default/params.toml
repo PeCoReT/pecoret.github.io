@@ -13,11 +13,11 @@ docsVersion = "0.1"
 images = ["doks.png"]
 ogLocale = "en_US"
 domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+titleHome = "PeCoReT"
 
 ## Twitter Cards
-#twitterSite = "@getdoks"
-#twitterCreator = "@henkverlinde"
+twitterSite = "@getdoks"
+twitterCreator = "@henkverlinde"
 
 ## JSON-LD
 # schemaType = "Person"
@@ -45,17 +45,17 @@ siteLinksSearchBox = false
 ## Chrome Browser
 themeColor = "#fff"
 
-# Images - Temporarily left in place for backward compatibility
-quality = 100
+# Images
+quality = 85
 bgColor = "#fff"
 landscapePhotoWidths = [900, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
-smallLimit = "3000"
+smallLimit = "300"
 
 # Images
-imageResponsive = false
-imageConvertTo = "png"
+imageResponsive = true
+imageConvertTo = "webp"
 imageImageSizes = ["480","720","1080","1280","1600","2048"]
 singleSize = false
 imageAddClass = "img-fluid lazyload blur-up"
@@ -84,10 +84,10 @@ docsRepo = "https://codeberg.org/PeCoReT/homepage"
 docsRepoBranch = "main"
 docsRepoSubPath = ""
 editPage = true
-lastMod = true
+lastMod = false
 
 [sections]
-sectionNav = ["docs", "guides"]
+  sectionNav = ["docs", "guides"]
 
 [options]
   lazySizes = true
@@ -110,5 +110,5 @@ sectionNav = ["docs", "guides"]
 
 [menu]
   [menu.section]
-    auto = false
+    auto = true
     collapsibleSidebar = false
