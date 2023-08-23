@@ -23,6 +23,13 @@
   identifier = "customizations"
   url = "/docs/customizations/"
 
+[[docs]]
+  name = "Development Guide"
+  weight = 120
+  identifier = "development"
+  url = "/docs/development-guide/"
+
+
 
 [[guide]]
   name = "Lorem"
