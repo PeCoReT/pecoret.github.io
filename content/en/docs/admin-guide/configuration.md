@@ -9,12 +9,12 @@ images: []
 menu:
   docs:
     parent: "admin-guide"
-weight: 30
+weight: 350
 toc: true
 ---
 
 The following settings are available.
-To change settings edit the file `local_settings.py` in the project root directory.
+To change settings edit the file `conf/production.py` in the project root directory.
 If the file does not yet exist, you may need to create it.
 
 
