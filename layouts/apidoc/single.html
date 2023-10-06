@@ -1,0 +1,15 @@
+{{ define "header" }}
+<style>
+  .apidoc {
+    margin: 0 !important;
+  }
+</style>
+{{ end }}
+
+{{ define "main" }}
+<div class="m-0">
+  <redoc spec-url='/schema.yaml'></redoc>
+  <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
+</div>
+
+{{ end }}

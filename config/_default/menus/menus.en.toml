@@ -60,6 +60,12 @@
   weight = 20
 
 [[main]]
+  name = "API Documentation"
+  url = "/api-docs/"
+  identifier = "apidocs"
+  weight = 25
+
+[[main]]
   name = "Community"
   weight = 30
   identifier = "community"

@@ -13,8 +13,9 @@
 {{ .Scratch.Add "class" " list" -}}
 {{ end -}}
 <body class="{{ .Scratch.Get "class" }}"{{ if eq .Site.Params.options.scrollSpy true }} data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -90%" data-bs-smooth-scroll="true" tabindex="0"{{ end }}>
-{{ partial "header/header.html" . }}
-{{ if eq .Kind "home" -}}
+{{ block "header" . }}{{ partial "header/header.html" . }}{{ end }}
+
+{{ if or (eq .Kind "home") (eq .Params.options.fullWidth true) -}}
 <div class="wrap" role="document">
   <div class="content">
     {{ block "main" . }}{{ end }}
