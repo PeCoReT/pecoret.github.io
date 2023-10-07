@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: 'PeCoReT',
     tagline: 'An Open Source Pentest Collaboration and Reporting Tool',
-    favicon: 'img/favicon.ico',
+    favicon: 'favicon.svg',
     trailingSlash: true,
 
     // Set the production url of your site here
