@@ -1,0 +1,56 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+@import "_fonts.scss";
+
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #2e8555;
+    --ifm-color-primary-dark: #29784c;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #33925d;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+    --ifm-color-primary: #62a0ea;
+    --ifm-color-primary-dark: #458ee6;
+    --ifm-color-primary-darker: #3685e4;
+    --ifm-color-primary-darkest: #1b6ccd;
+    --ifm-color-primary-light: #7fb2ee;
+    --ifm-color-primary-lighter: #8ebbf0;
+    --ifm-color-primary-lightest: #bad5f6;
+    --ifm-background-color: #0B1326; /*#241f31;*/
+
+    /* not part of the style editor of docusaurus */
+    --ifm-font-family-base: 'Roboto';
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-background-secondary: #172331;
+}
+
+.footer--dark {
+    --ifm-footer-background-color: var(--ifm-background-secondary);
+}
+
+.footer__links {
+    text-align: center;
+}
+
+.header-codeberg-link:hover {
+    opacity: 0.6;
+}
+
+.header-codeberg-link:before {
+    background: url('/img/codeberg.svg') no-repeat;
+    content: "";
+    display: flex;
+    height: 24px;
+    width: 24px;
+}
