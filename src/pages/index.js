@@ -23,7 +23,7 @@ function HomepageHeader() {
                     </Link>
                     <span className="margin--md"></span>
                     <Link className="button button--info button--lg col landing-button"
-                          to="https://codeberg.org/pecoret/pecoret">
+                          to="https://github.com/pecoret/pecoret/releases">
                         Download v0.1.0
                     </Link>
                     <span className="col--offset-3"></span>

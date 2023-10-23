@@ -82,10 +82,10 @@ const config = {
                     },
                     {to: '/blog', label: 'Blog', position: 'left'},
                     {
-                        href: 'https://github.com/facebook/docusaurus',
-                        "aria-label": 'Codeberg',
+                        href: 'https://github.com/PeCoReT',
+                        "aria-label": 'GitHub',
                         position: 'right',
-                        className: 'header-codeberg-link'
+                        className: 'header-github-link'
                     },
                 ],
             },
