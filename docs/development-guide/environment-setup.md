@@ -4,7 +4,7 @@ title: Environment Setup
 
 ## Backend
 ```bash
-git clone https://codeberg.org/PeCoReT/pecoret
+git clone https://github.com/PeCoReT/pecoret
 
 cd server
 pip install -r requirements.txt
