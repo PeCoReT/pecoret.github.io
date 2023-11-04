@@ -105,8 +105,8 @@ const config = {
                         title: 'Community',
                         items: [
                             {
-                                label: 'Matrix',
-                                href: '/docs',
+                                label: 'Discussions',
+                                href: 'https://github.com/PeCoReT/pecoret-issues/discussions',
                             },
                         ],
                     },
@@ -118,8 +118,8 @@ const config = {
                                 to: '/blog',
                             },
                             {
-                                label: 'Codeberg',
-                                href: 'https://codeberg.org/pecoret',
+                                label: 'GitHub',
+                                href: 'https://github.com/pecoret',
                             },
                         ],
                     },
