@@ -4,7 +4,6 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -12,8 +11,7 @@ function HomepageHeader() {
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
             <div className="container banner">
-                <h1 className="hero__title">{siteConfig.title}</h1>
-                <p className="hero__subtitle">{siteConfig.tagline}</p>
+                <img src="/img/logo.svg"/>
                 <div className={styles.buttons}>
                     <span className="col--offset-3"></span>
                     <Link
@@ -28,8 +26,6 @@ function HomepageHeader() {
                     </Link>
                     <span className="col--offset-3"></span>
                 </div>
-
-
             </div>
         </header>
     );

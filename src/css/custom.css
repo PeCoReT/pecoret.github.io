@@ -67,3 +67,7 @@
     height: 24px;
     width: 24px;
 }
+
+.navbar__logo {
+    height: 1.1rem;
+}

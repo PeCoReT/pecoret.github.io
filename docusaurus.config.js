@@ -68,10 +68,10 @@ const config = {
               disableSwitch: true
             },
             navbar: {
-                title: 'PeCoReT',
+                title: '',
                 logo: {
                     alt: 'PeCoReT Logo',
-                    src: 'img/logo.svg',
+                    src: 'img/logo-no-slogan.svg',
                 },
                 items: [
                     {
