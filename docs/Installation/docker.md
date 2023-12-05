@@ -8,7 +8,7 @@ title: Docker
 You can get an example docker compose file from the [repository](https://github.com/pecoret/pecoret).
 
 ```bash
-wget https://github.com/pecoret/pecoret/docker-compose.yaml
+wget https://raw.githubusercontent.com/PeCoReT/pecoret/main/docker-compose.yaml
 ```
 
 :::caution
