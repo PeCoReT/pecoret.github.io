@@ -5,6 +5,11 @@ title: Permissions
 PeCoReT comes with a permission system. Users can be part of groups, that enables the user to perform specific actions.
 Also, users can be part of projects and have a role in this project.
 
+:::info
+The super admin user is not intended for actual use, but only for configuring the application.
+:::
+
+
 ## Available User Groups
 
 **Management:**   
