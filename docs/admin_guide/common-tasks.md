@@ -43,3 +43,10 @@ A management command is available to initialize some default cronjobs (e.g. dele
 python manage.py init_default_cronjobs
 ```
 
+### Import Sample Data
+
+If you want to import some sample data, you can run the following management command:
+
+```bash
+python manage.py sampledata
+```

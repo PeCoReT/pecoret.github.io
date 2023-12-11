@@ -15,23 +15,15 @@ CORS_ALLOWED_ORIGINS = ["https://localhost", "https://pecoret.lan"]
 CSRF_TRUSTED_ORIGINS = ["https://pecoret.lan", "https://pecoret.lan:8443"]
 ALLOWED_HOSTS = ["pecoret.lan", "pecoret.lan:8443"]
 
-# only required, if you serve frontend and server in different origins
+# only required, if you serve frontend and server in different origins, otherwise Strict
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
 
-SECRET_KEY = "somelongsecret key"
 
 # Do not turn on DEBUG in production!
 DEBUG = False
 ```
 
-The site specific settings are mainly used to create mails:
-
-```python
-SITE_NAME = "My cool PeCoReT instance"
-DOMAIN = "pecoret.example.com"
-PROTOCOL = "https"
-```
 
 Django comes with a built-in admin panel. It is disabled by default in PeCoReT.
 If you need it, you can enable it with the following setting:
@@ -60,19 +52,4 @@ Define the default advisory template that is used. The template name must match 
 
 ```python
 ADVISORY_TEMPLATE = "my_customizations"
-```
-
-## Reporting
-To populate the report templates with your company information, you can use the following settings.
-The dictionary is added to the context while rendering reports.
-
-```python
-REPORT_COMPANY_INFORMATION = {
-  "name": "PeCoReT",
-  "street": "Test Street 1",
-  "zip": "1337",
-  "city": "London",
-  "homepage": "https://pecoret.github.io",
-  "email": "pecoret@example.com",
-}
 ```
