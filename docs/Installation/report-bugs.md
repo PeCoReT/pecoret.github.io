@@ -6,7 +6,7 @@ title: How to report a bug
 # How to report a bug
 
 We use GitHub issues as our issue tracking system.
-All issues can be found in the separate [pecoret-issues](https://github.com/pecoret/pecoret-issues) repository.
+Issues can be reported using the issues tab of the affected repository.
 
 Please check for duplicates before submitting an issue.
 If another issue exists, and you have further information, respond to the existing issue.
