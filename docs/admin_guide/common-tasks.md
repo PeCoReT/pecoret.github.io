@@ -50,3 +50,5 @@ If you want to import some sample data, you can run the following management com
 ```bash
 python manage.py sampledata
 ```
+
+The script will create a new user `hschrader` with the password `InitialPassword123`.
