@@ -64,8 +64,8 @@ const config = {
             // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
             colorMode: {
-              defaultMode: 'dark',
-              disableSwitch: true
+                defaultMode: 'dark',
+                disableSwitch: true
             },
             navbar: {
                 title: '',
@@ -82,11 +82,16 @@ const config = {
                     },
                     {to: '/blog', label: 'Blog', position: 'left'},
                     {
+                        type: 'docsVersionDropdown',
+                        position: 'right'
+                    },
+                    {
                         href: 'https://github.com/PeCoReT',
                         "aria-label": 'GitHub',
                         position: 'right',
                         className: 'header-github-link'
                     },
+
                 ],
             },
             footer: {
@@ -131,22 +136,22 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
         }),
-     themes: [
-    // ... Your other themes.
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        // language: ["en", "zh"],
-        // ```
-      }),
+    themes: [
+        // ... Your other themes.
+        [
+            require.resolve("@easyops-cn/docusaurus-search-local"),
+            /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+            ({
+                // ... Your options.
+                // `hashed` is recommended as long-term-cache of index file is possible.
+                hashed: true,
+                // For Docs using Chinese, The `language` is recommended to set to:
+                // ```
+                // language: ["en", "zh"],
+                // ```
+            }),
+        ],
     ],
-  ],
 };
 
 module.exports = config;

@@ -2,79 +2,72 @@
 title: Report Templates
 ---
 
-This part is, personally thinking, the most difficult and time-consuming part in making PeCoReT your own.
-This page tries to help you to get familiar implementing custom report templates.
-Once done, PeCoReT can use the template for various report generation tasks.
+In this documentation, we will explain how to customize report templates using Python packages, HTML, and CSS.
+The report templates are stored in the `server/extensions/report_templates` directory.
 
-Report templates use the jinja2 rendering engine.
-Weasyprint is used to finally generate the PDF.
-Other report types are jinja-only.
+To create a new report template, you simply need to create a new subdirectory with the desired template name.
+Please note that the template name should only consist of letters, numbers, and underscores (no special characters).
 
-## Directory Structure
-Customizations in PeCoReT can be loaded from file paths. An example directory structure of a report template is shown below.
+## Create a Report Template
+To create a report template, you need to create a `plugin.py` file in the template's directory.
+This file should contain a class named `ReportPlugin` that inherits from the `pecoret.reporting.report_plugin.BaseReportPlugin` class.
+The `ReportPlugin` class allows you to customize the existing templates or create new ones.
+
+Here's an example of how to customize the color scheme used by the charts of the `default_template` report template:
+
+```python title=plugin.py
+from extensions.report_templates.default_template.plugin import ReportPlugin as BasePlugin
+
+
+class ReportPlugin(BasePlugin):
+    # inherit from default_template
+    plugin_name = 'default_template'
+
+    # change the colors of the default_template
+    SEVERITY_COLORS = {
+        'critical': '#7a3e7d',
+        'high': '#d13c0f',
+        'medium': '#e8971e',
+        'low': '#2075f5',
+        'informational': '#059D1D',
+        'fixed': ' #43616f'
+    }
 
 ```
-my_report_template
-|-- __init__.py
-|-- report.py
-|-- templates
-	|--- pentest_report.html
-	|--- advisory.md
-	|--- ...
+
+## Examples
+
+### Overwrite CSS
+
+In the first step, we must append our custom CSS file to the list of CSS files used by the `PDFReportGenerator`.
+
+```python title=plugin.py
+from pathlib import Path
+from pecoret.reporting import generators
+from ..default_template.plugin import ReportPlugin as BasePlugin
+
+
+class ReportPlugin(BasePlugin):
+    # inherit from default_template
+    plugin_name = 'default_template'
+
+    def on_preprocess(self, generator, **kwargs):
+        super().on_preprocess(generator, **kwargs)
+        if isinstance(generator, generators.PDFReportGenerator):
+            generator.css_files.append(Path(self.get_report_templates_directory() / 'test/templates/main.css'))
+
 ```
 
-## Styles
-The report generator searches for a `scss/main.scss` file.
-It is compiled and included by default.
+overwrite existing styles with a custom CSS file:
+
+```css title=templates/main.css
+:root {
+    --color-critical: #20bd98;
+}
+```
 
 ## Installation / Usage
 To finally use the template a super admin user needs to create the template using the REST-API or web interface.
-
-
-## Create a new report template
-First of all, you need to create the directory structure, mentioned above.
-
-First of all the entry point file (`report.py`) is required:
-
-```bash
-mkdir -p ~/my_report_template/templates
-cd ~/my_report_template
-touch report.py
-touch __init__.py
-```
-
-Inside your `templates` directory, the following files may be present:
-
-* vulnerability_overview.csv: Used to export a vulnerability overview for a project report.
-* single_finding_export.html: used to export a single finding to PDF report.
-* pentest_report.html: Used to generate a pentest PDF report.
-* advisory.md: Markdown version of a advisory.
-* advisory_export.html: Export advisory details to PDF.
-
-
-The `report.py` file may contain the following classes.
-
-```python
-from pecoret.core.reporting import types as report_types
-
-class PentestPDFReport(report_types.PentestPDFReport):
-    pass
-
-class SingleFindingPDFReport(report_types.SingleFindingPDFReport):
-    pass
-
-
-class AdvisoryMarkdownExport(report_types.AdvisoryMarkdownExport):
-    pass
-
-
-class AdvisoryPDFExport(report_types.AdvisoryPDFExport):
-    pass
-
-
-class VulnerabilityCSVReport(report_types.VulnerabilityCSVReport):
-    pass
-```
 
 ## Internationalization
 :::caution

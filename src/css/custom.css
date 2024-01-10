@@ -43,19 +43,6 @@
     text-align: center;
 }
 
-/*
-.header-codeberg-link:hover {
-    opacity: 0.6;
-}
-
-.header-codeberg-link:before {
-    background: url('/img/codeberg.svg') no-repeat;
-    content: "";
-    display: flex;
-    height: 24px;
-    width: 24px;
-}*/
-
 .header-github-link:hover {
     opacity: 0.6;
 }
