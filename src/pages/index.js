@@ -35,8 +35,8 @@ export default function Home() {
     const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-            title={`${siteConfig.title}`}
-            description="An open source pentest collaboration and reporting tool. Everything you need to manage your penetration test projects <head />">
+            title={`Pentest Collaboration and Reporting Tool`}
+            description="An open source pentest collaboration and reporting tool. Selfhosted penetration test management platform.<head />">
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>
