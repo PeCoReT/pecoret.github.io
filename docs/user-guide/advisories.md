@@ -3,7 +3,7 @@ sidebar_position: 50
 title: Advisories
 ---
 
-Advisories are findings that belong to a third party application. They can be exported to PDF or Markdown files and may have CVE-IDs assigned.
+Advisories are findings that belong to a third party application. They can be exported to PDF and may have CVE-IDs assigned.
 
 The `Inbox` is just available to users of the `Advisory Management` group.
 
@@ -28,7 +28,6 @@ You can create advisories from findings of your project. Additional information 
 
 
 ## Export Advisories
-You can export advisories to a markdown file, which you may want to use in combination to static side generators.
-Or you can export an advisory to a PDF report file.
+You can export advisories to PDF files using the UI.
 
 ![download-advisories](/img/attachments/download-advisories.png)
