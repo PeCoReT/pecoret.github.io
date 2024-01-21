@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -33,6 +32,10 @@ const config = {
         locales: ['en'],
     },
 
+    plugins: [
+        require.resolve("docusaurus-plugin-image-zoom")
+    ],
+
     presets: [
         [
             'classic',
@@ -59,8 +62,7 @@ const config = {
         ],
     ],
     themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-        ({
+        {
             // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
             colorMode: {
@@ -135,7 +137,17 @@ const config = {
                 theme: darkCodeTheme,
                 darkTheme: darkCodeTheme,
             },
-        }),
+            zoom: {
+                selector: '.markdown img',
+                config: {
+                    // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+                    background: {
+                        light: 'rgb(255, 255, 255)',
+                        dark: 'rgb(50, 50, 50)'
+                    }
+                }
+            },
+        },
     themes: [
         // ... Your other themes.
         [
