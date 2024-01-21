@@ -1,5 +1,6 @@
 ---
-title: Environment Setup
+title: Setup Development Environment
+sidebar_position: 50
 ---
 
 ## Backend
