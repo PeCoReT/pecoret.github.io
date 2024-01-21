@@ -18,8 +18,8 @@ const FeatureList = [
         Svg: require('@site/static/img/landing/user-pen.svg').default,
         description: (
             <>
-                Customize different aspects of the application like report templates, checklists, vulnerability
-                templates, ... . Or integrate tools using the REST-API
+                Tailor PeCoReT to fit your unique needs.
+                Customize report templates, vulnerability templates, and checklists to align the application with your specific assessment methodologies and reporting preferences.
             </>
         ),
     },
@@ -28,17 +28,18 @@ const FeatureList = [
         Svg: require('@site/static/img/landing/wand-magic-sparkles.svg').default,
         description: (
             <>
-                Flexible report generator using weasyprint. Never struggle with Word documents again!
+                Bid farewell to traditional Word documents.
+                PeCoReT features a state-of-the-art report generator based on WeasyPrint, ensuring sleek and professional reports for your assessments.
             </>
         ),
     },
     {
-        title: 'Responsible Disclosure',
+        title: 'Advisory Management',
         Svg: require('@site/static/img/landing/bug.svg').default,
         description: (
             <>
-                Manage advisories and share vulnerability details with vendors during the responsible disclosure
-                process.
+                Effortlessly navigate the responsible disclosure process with our integrated Advisory Management application.
+                Track, manage, and collaborate on advisories as part of a streamlined and secure disclosure workflow.
             </>
         ),
     },
@@ -47,7 +48,8 @@ const FeatureList = [
         Svg: require('@site/static/img/landing/markdown.svg').default,
         description: (
             <>
-                Write your executive summary, proofs, ... in markdown.
+                Simplify your documentation with Markdown.
+                Write and format your findings, notes, advisories and more effortlessly using this lightweight and intuitive markup language.
             </>
         ),
     },
@@ -56,7 +58,7 @@ const FeatureList = [
         Svg: require('@site/static/img/landing/list-check.svg').default,
         description: (
             <>
-               Afraid of forgetting something during the pentest? Track what you have tested on your assets using checklists.
+               Stay organized and keep track of your progress with built-in checklists. Mark off completed tasks, ensuring that nothing is overlooked during your assessments.
             </>
         ),
     },
