@@ -3,15 +3,31 @@ sidebar_position: 60
 title: Using Checklists
 ---
 
-Checklists are used to track the project of the pentest for the assets.
+Checklists (or checklist templates) are an aspect of the application, allowing users to define standardized assessment checklists that can be reused across various projects.
+These checklists serve as a starting point for creating structured and consistent checklists tailored to specific security assessment needs.
 
-A checklist - in the background - consists of a list, categories and items.
+## Categories
+Checklist categories provide a way to organize and group related assessment checks within a checklist template.
+For example, a checklist template for a web application assessment might include categories such as "Authentication," "Authorization," or "Input Validation".
+This hierarchical structure ensures a logical and organized approach to assessments.
 
-![checklist-overview](/img/attachments/checklist-overview.png)
+## Items
+Items represent individual checks or tasks within a checklist category.
+Each item contains detailed information about the check, including the specific criteria, steps to follow, and any additional notes relevant to the assessment.
+Users can customize items to meet the specific requirements of their security assessments.
 
-The screenshot above has a small *Web Application Checklist* enabled, which only consists of the *Password Reset Function* category.
-This category contains three items - “common-flaws”, “password reset poisoning” and “reset-token-leak-referrer”.
-Items can contain a description written in Markdown. However, a category does not have to contain items, but then it cannot be checked off in the frontend.
 
-A checklist including its categories and items can be deleted by clicking the red button.
-If a new checklist is to be activated for an asset, the button with the plus symbol can be used.
+## How to Create Checklists
+
+1. Open the *Checklists* menu of the navigation bar.
+2. Create a new checklist by visiting the *Checklists* page and click on the *create* button.
+3. Fill the form and click the *save* button.
+
+![checklist create](/img/attachments/checklist-create-ui.png)
+
+
+## Applying Checklists to Project Assets
+The globally available checklists can be assigned to project assets.
+
+![checklist asset](/img/attachments/checklist-project-asset-create.png)
+
