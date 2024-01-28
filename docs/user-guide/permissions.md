@@ -10,7 +10,9 @@ The super admin user is not intended for actual use, but only for configuring th
 :::
 
 
-## Available User Groups
+## Groups
+The application categorizes users into specific groups, each representing a distinct set of responsibilities and permissions.
+Here are the available groups:
 
 **Management:**   
 *Management* is a higher privileged group which has permissions to create projects.
@@ -22,7 +24,8 @@ Users of this group can become members of projects.
 Depending on their role in the project, they are able to change objects belonging to the project.
 
 **Customers:**   
-*This is not yet implemented!*
+Users in the "Customers" group are related to a company. They have read and write access to data related to the company.
+However, they cannot view all projects and project-related data without being explicitly added to the project.
 
 **Vendors:**   
 Vendors are low privileged users.
@@ -48,6 +51,3 @@ The different is just to track the responsible people of the project.
 
 **Read Only:**   
 *Read Only* users have read only permission to the project and objects belonging to the project.
-
-**Customer:**   
-*Not yet implemented!*
