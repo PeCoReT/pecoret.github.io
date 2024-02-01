@@ -1,41 +1,39 @@
-# Website
+# PeCoReT Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This repository contains the source code for the website of PeCoReT (Pentest Collaboration and Reporting Tool).
+The website is built using Docusaurus, a modern static website generator.
 
-### Installation
 
-```
-$ yarn
-```
+## About PeCoReT
 
-### Local Development
+PeCoReT is an open-source software designed to enhance collaboration and streamline the reporting process in penetration testing engagements.
+It provides a centralized platform for penetration testers to collaborate, document findings, and generate professional reports efficiently.
 
-```
-$ yarn start
-```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Building the Website Locally
+To build and run the PeCoReT website locally, follow these steps:
 
-### Build
-
-```
-$ yarn build
+1. Clone this repository:
+```bash
+git clone https://github.com/pecoret/pecoret.github.io.git
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+2. Navigate to the project directory:
+```bash
+cd pecoret.github.io 
 ```
 
-Not using SSH:
-
+3. Install dependencies:
+```bash
+npm install 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+4. Start the local development server:
+```bash
+npm run start 
+```
+The website will be accessible at http://localhost:3000.
+
+
+## Contributing to the Documentation
+If you would like to contribute to the PeCoReT documentation, please check out our [Contribution Guidelines](https://pecoret.github.io/docs/category/contribution-guide/).

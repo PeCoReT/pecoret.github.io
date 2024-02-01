@@ -84,10 +84,6 @@ const config = {
                     },
                     {to: '/blog', label: 'Blog', position: 'left'},
                     {
-                        type: 'docsVersionDropdown',
-                        position: 'right'
-                    },
-                    {
                         href: 'https://github.com/PeCoReT',
                         "aria-label": 'GitHub',
                         position: 'right',
