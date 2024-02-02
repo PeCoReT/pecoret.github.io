@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.1.1",
-    "@docusaurus/preset-classic": "3.1.0",
+    "@docusaurus/preset-classic": "3.1.1",
     "@easyops-cn/docusaurus-search-local": "^0.40.1",
     "docusaurus-plugin-image-zoom": "^1.0.1",
     "prism-react-renderer": "^2.3.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.1.0"
+    "@docusaurus/module-type-aliases": "^3.1.1"
   },
   "browserslist": {
     "production": [
