@@ -33,7 +33,7 @@ They can be invited by the [Advisory Management](/docs/user-guide/advisories#adv
 
 
 **Advisory Management:**
-Advisory Management is allowed to see all submitted advisories. Draft advisories are not included in those advisories.
+Advisory Management is allowed to see all submitted advisories (With *visibility* set to "Team").
 The users of the group are allowed to manage all submitted advisories.
 
 
