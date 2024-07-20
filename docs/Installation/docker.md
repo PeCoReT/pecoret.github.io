@@ -5,6 +5,11 @@ title: Docker
 
 # Docker
 
+:::warning
+This method is currently not the recommended way to run PeCoReT!
+The docker version is not tested!
+:::
+
 You can get an example docker compose file from the [repository](https://github.com/pecoret/pecoret).
 
 ```bash

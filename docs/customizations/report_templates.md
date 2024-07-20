@@ -2,72 +2,81 @@
 title: Report Templates
 ---
 
-In this documentation, we will explain how to customize report templates using Python packages, HTML, and CSS.
-The report templates are stored in the `server/extensions/report_templates` directory.
-
-To create a new report template, you simply need to create a new subdirectory with the desired template name.
-Please note that the template name should only consist of letters, numbers, and underscores (no special characters).
-
-## Create a Report Template
-To create a report template, you need to create a `plugin.py` file in the template's directory.
-This file should contain a class named `ReportPlugin` that inherits from the `pecoret.reporting.report_plugin.BaseReportPlugin` class.
-The `ReportPlugin` class allows you to customize the existing templates or create new ones.
-
-Here's an example of how to customize the color scheme used by the charts of the `default_template` report template:
-
-```python title=plugin.py
-from extensions.report_templates.default_template.plugin import ReportPlugin as BasePlugin
+Report templates enable you to generate comprehensive and professional pentest reports with customized layouts, styles, and content.
+These templates utilize Python and Jinja, alongside CSS and fonts, to ensure your reports meet your specific needs.
+This document will guide you through enabling, customizing, and creating new report templates.
 
 
-class ReportPlugin(BasePlugin):
-    # inherit from default_template
-    plugin_name = 'default_template'
+## Presets
+Several preset templates are available out-of-the-box, which you can use as a base for customization:
 
-    # change the colors of the default_template
-    SEVERITY_COLORS = {
-        'critical': '#7a3e7d',
-        'high': '#d13c0f',
-        'medium': '#e8971e',
-        'low': '#2075f5',
-        'informational': '#059D1D',
-        'fixed': ' #43616f'
-    }
+* default_template: The default template using blue primary color.
+* lime: The default template using lime as primary color.
 
-```
-
-## Examples
-
-### Overwrite CSS
-
-In the first step, we must append our custom CSS file to the list of CSS files used by the `PDFReportGenerator`.
-
-```python title=plugin.py
-from pathlib import Path
-from pecoret.reporting import generators
-from ..default_template.plugin import ReportPlugin as BasePlugin
+The presets are located in the `pecoret` repository under `server/resources/report_templates/`.
+These presets can be customized by modifying their CSS files to change styles and layouts as per your requirements.
 
 
-class ReportPlugin(BasePlugin):
-    # inherit from default_template
-    plugin_name = 'default_template'
+## New Report Template using Presets
 
-    def on_preprocess(self, generator, **kwargs):
-        super().on_preprocess(generator, **kwargs)
-        if isinstance(generator, generators.PDFReportGenerator):
-            generator.css_files.append(Path(self.get_report_templates_directory() / 'test/templates/main.css'))
+To customize a preset, just have a look at the required CSS variables and create a css file with your custom style.
 
-```
+The following example customizes the primary color of the default template:
 
-overwrite existing styles with a custom CSS file:
-
-```css title=templates/main.css
+```css
 :root {
-    --color-critical: #20bd98;
+    /* Lime Color Palette */
+    --primary-100: #ccffcc;
+    --primary-200: #99ff99;
+    --primary-300: #66ff66;
+    --primary-400: #00ff00;
+    --primary-500: #00cc00;
+    --primary-600: #009900;
+    --primary-700: #006600;
 }
 ```
 
-## Installation / Usage
-To finally use the template a super admin user needs to create the template using the REST-API or web interface.
+Open the settings file and add your new template to the `REPORT_TEMPLATES` dict:
+
+```python
+REPORT_TEMPLATES = {
+    'lime': {
+        'preset': 'default_template',
+        'css_files': [BASE_DIR / 'resources/report_templates/default_template/styles/lime.css'],
+    }
+}
+
+```
+
+
+## Create a New Report Template
+
+To create a new report template from scratch, follow these steps:
+
+1. Create Directory Structure:
+
+* Create a main directory for your template
+* Inside this directory, create a subdirectory name `templates`
+
+**Example:**
+
+```plaintext
+my_custom_template/
+├── templates/
+└── my_custom_template.py
+```
+
+2. Implement Plugin
+
+The python file must contain a class `ReportTemplate`.
+The class must implement the following methods:
+
+* `export_single_finding(self, finding)`
+* `export_advisory_pdf(self, advisory)`
+* `export_project_pdf_report(self, report_document)`
+
+The `pecoret.reporting.template.mixins` module contains mixins you can utilize.
+
 
 ## Internationalization
 :::caution
