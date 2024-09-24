@@ -53,3 +53,16 @@ Define the default advisory template that is used. The template name must match 
 ```python
 ADVISORY_TEMPLATE = "my_customizations"
 ```
+
+
+## Attack Surface
+
+```python
+# enable the scanning feature to allow users to queue scans
+AS_ENABLE_SCANNING = True
+AS_QUEUE = {
+    'host': 'localhost',
+    'port': 6379
+}
+AS_ENABLE_SCAN_ON_CREATION = False
+```
