@@ -81,3 +81,9 @@ To only list services with port 80 available:
 ```
 port.number == 80
 ```
+
+
+## Continues Scanning
+
+A management command exists which performs continues scanning by fetching data from the PeCoReT which were not scanned lately.
+You can either create a scheduled `django-q2` task or a cronjob.

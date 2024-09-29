@@ -61,8 +61,23 @@ ADVISORY_TEMPLATE = "my_customizations"
 # enable the scanning feature to allow users to queue scans
 AS_ENABLE_SCANNING = True
 AS_QUEUE = {
-    'host': 'localhost',
-    'port': 6379
+    'host': '10.10.10.10',
+    'port': 6379,
+    'username': '',
+    'password': '<password>',
+    'ssl': True,
+    'ssl_ca_certs': './mycerts.pem',
+    'queues': {
+        'nuclei-critical-high-vuln': 'vuln-scanning'
+    }
 }
-AS_ENABLE_SCAN_ON_CREATION = False
+# enqueue scans when a new item is created
+AS_ENABLE_SCAN_ON_CREATION = True
+
+# only enqueue these scan types when a new item is created (e.g. only enrich ASN data an perform quick TCP port scans)
+AS_ALLOWED_SCAN_TYPES_ON_CREATION = [
+    'nmap-quick-tcp',
+    'asn-enrich'
+]
+
 ```
