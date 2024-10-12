@@ -25,7 +25,6 @@ pecoret-2022-0010
 A date with the planned date of disclosing the advisory details is calculated based on the server’s settings. The default date can be changed after creation.
 
 
-
 ## Advisory Status
 Advisories within the system can take on different statuses, indicating their position in the resolution process.
 
@@ -34,10 +33,8 @@ The responsible disclosure process is ongoing, and stakeholders are actively wor
 * **Disclosed:** This status signifies that the advisory and associated vulnerability information have been made public.
 
 ## Advisory Visibility
-Advisories come with different visibility options:
+Advisories can be accessed by all users of the `Pentester` group.
 
-* **Team:** Visible to members of the `Advisory Management` group.
-* **Members:** Visible only to the users with whom the advisory is shared (see *Membership* Tab of the advisory).
 
 ## Vulnerability Status
 Advisories are also tracking the status of the actual vulnerability.
@@ -49,7 +46,7 @@ Advisories are also tracking the status of the actual vulnerability.
 
 ## Proof of Concepts
 Advisory proofs, detailing the specifics of a security vulnerability, are written in Markdown.
-Images can be attached an includes in the proof.
+Images can be attached and included in the proof.
 
 ## Advisories from Project Findings
 PeCoReT seamlessly integrates with project findings, allowing the creation of advisories directly from identified security issues within projects.
@@ -58,33 +55,13 @@ This streamlines the workflow, ensuring a smooth transition from vulnerability d
 ![advsiory from finding](/img/attachments/advisory-from-finding.png)
 
 
-## Advisory Management Group
-
-The *Advisory Management* group plays a pivotal role in overseeing and coordinating the responsible process within PeCoReT.
-This group consists of members who are authorized and equipped to handle the submitted advisories.
-
-Key responsibilities of the Advisory Management group include:
-
-### Processing Submitted Advisories
-Members of the *Advisory Management* group are responsible for reviewing and processing advisories submitted by users.
-This involves a thorough assessment of the reported vulnerabilities and the initiation of the responsible disclosure process towards the vendor.
-
-### Managing Advisory Memberships
-Members of the *Advisory Management* group have permissions to share advisories with other users, including the vendor.
-This collaborative approach ensures effective communication and coordination during the resolution process.
-
-### Full Permissions on Team Advisories
-The *Advisory Management* group is granted full permissions on all advisories with the `visibility` set to `Team`.
-This allows group members to have comprehensive control over these advisories, ensuring that the necessary actions are taken promptly.
-
-### Inbox View
-Members of the *Advisory Management* group have access to an "Inbox" view, listing all submitted advisories.
-This centralized view streamlines the workflow, allowing for efficient management and tracking of the advisory processing status.
-
-![advisory inbox](/img/attachments/advisory-inbox.png)
+## Share Tokens
+You can generate share tokens that can be shared with a vendor using a link.
+Share tokens can be configured with an expiry date.
+If a vendor visits the link, they can download the current PDF report of the advisory.
 
 
-### Advisory  Dashboard
+## Advisory  Dashboard
 The *Advisory Management* group can access a dashboard containing relevant statistics related to the submitted advisories.
 This includes key metrics, such as the number of advisories received, the status of ongoing processes, and other relevant insights, providing an overview of the group's activities.
 
