@@ -62,7 +62,7 @@ If a vendor visits the link, they can download the current PDF report of the adv
 
 
 ## Advisory  Dashboard
-The *Advisory Management* group can access a dashboard containing relevant statistics related to the submitted advisories.
+The *Pentester* group can access a dashboard containing relevant statistics related to the submitted advisories.
 This includes key metrics, such as the number of advisories received, the status of ongoing processes, and other relevant insights, providing an overview of the group's activities.
 
 ![advisory dashboard](/img/attachments/advisory-dashboard.png)

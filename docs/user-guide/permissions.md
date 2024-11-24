@@ -27,15 +27,6 @@ Depending on their role in the project, they are able to change objects belongin
 Users in the "Customers" group are related to a company. They have read and write access to data related to the company.
 However, they cannot view all projects and project-related data without being explicitly added to the project.
 
-**Vendors:**   
-Vendors are low privileged users.
-They can be invited by the [Advisory Management](/docs/user-guide/advisories#advisory-management) and are able to get access to advisories, that were shared with them.
-
-
-**Advisory Management:**
-Advisory Management is allowed to see all submitted advisories (With *visibility* set to "Team").
-The users of the group are allowed to manage all submitted advisories.
-
 
 ## Project Roles
 

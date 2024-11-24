@@ -2,10 +2,7 @@
 slug: unveiling-the-milestone-introducing-pecoret-v0.1.0
 title: "Unveiling the Milestone: Introducing PeCoReT v0.1.0"
 authors:
-  name: blocki
-  title: Core Team
-  url: https://github.com/blockisec
-  image_url: https://github.com/blockisec.png
+  - blocki
 tags: [news]
 ---
 

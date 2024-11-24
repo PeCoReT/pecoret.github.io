@@ -25,12 +25,6 @@ DEBUG = False
 ```
 
 
-Django comes with a built-in admin panel. It is disabled by default in PeCoReT.
-If you need it, you can enable it with the following setting:
-```python
-ENABLE_DJANGO_ADMIN_PANEL = True
-```
-
 ## Database
 by default, a SQlite database is used, which is not recommended for production environments.
 
@@ -60,19 +54,6 @@ ADVISORY_TEMPLATE = "my_customizations"
 ```python
 # enable the scanning feature to allow users to queue scans
 AS_ENABLE_SCANNING = True
-AS_QUEUE = {
-    'host': '10.10.10.10',
-    'port': 6379,
-    'username': '',
-    'password': '<password>',
-    'ssl': True,
-    'ssl_ca_certs': './mycerts.pem',
-    'queues': {
-        'nuclei-critical-high-vuln': 'vuln-scanning'
-    }
-}
-# enqueue scans when a new item is created
-AS_ENABLE_SCAN_ON_CREATION = True
 
 # only enqueue these scan types when a new item is created (e.g. only enrich ASN data an perform quick TCP port scans)
 AS_ALLOWED_SCAN_TYPES_ON_CREATION = [

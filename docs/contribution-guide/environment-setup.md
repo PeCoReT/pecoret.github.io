@@ -58,14 +58,10 @@ python manage.py createsuperuser
 
 ## Frontend
 
-create a `.env.local` file:
-
-```ini
-VITE_APP_API_URL=http://localhost:8000/api
-```
-
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+
+visit `http://127.0.0.1:8000`.
